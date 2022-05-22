@@ -1,0 +1,46 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.content {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+}
+
+.menu {
+    width: 300px;
+    max-width: 300px;
+    flex: 1 2 auto;
+    border: black solid 0.5px;
+}
+
+.grid {
+
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+
+    width: 500px;
+    max-width: 500px;
+    height: 500px;
+    max-height: 500px;
+}
+
+.row , .col {
+    border: black solid 0.5px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+}
+
+.col {
+    flex: 1 1 auto;
+}
