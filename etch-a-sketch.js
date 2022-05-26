@@ -15,3 +15,14 @@ for(let i = 0; i < grid_size; i++) {
         row.appendChild(col);
     }
 }
+
+const sketch = document.querySelectorAll('.col');
+
+
+
+sketch.forEach((div) => {
+
+    div.addEventListener('mousemove', function (e) {
+        e.target.style.background = 'black';
+    });
+});
