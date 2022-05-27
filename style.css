@@ -2,7 +2,13 @@
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 40px;
+}
+
+.title {
+    margin-bottom: 40px;
+    font-size: 22px;
 }
 
 .content {
@@ -14,9 +20,41 @@ body {
 
 .menu {
     width: 300px;
-    max-width: 300px;
+    min-width: 300px;
+    display: flex;
     flex: 1 2 auto;
+    flex-direction: column;
+    justify-content: flex-start;
+
     border: black solid 0.5px;
+    padding-top: 32px;
+    font-size: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.clr , .size {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: left;
+    gap: 20px;
+;
+}
+
+input {
+    display: flex;
+}
+
+label {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: right;
+    width: 125px;
+    a
 }
 
 .grid {
@@ -25,10 +63,8 @@ body {
     display: flex;
     flex-direction: column;
 
-    width: 500px;
-    max-width: 500px;
-    height: 500px;
-    max-height: 500px;
+    width: 550px;
+    height: 550px;
 }
 
 .row , .col {
