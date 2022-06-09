@@ -33,6 +33,46 @@ function draw(element_array, color_selection) {
 };
 
 
+//function inputs are an array of elements.
+//the function attaches event listeners each div in the array of elements
+//and fills the background with a random color when moused over.
+function rainbow(element_array) {
+    
+    element_array.forEach((div) => {
+
+        div.addEventListener('mouseenter', function (e) {
+            let brightness = 50;
+            let color = (Math.ceil(360 * (Math.random())));
+            e.target.style.background = `hsl(${color}, 100%, ${brightness}%)`;
+        });
+    });
+};
+
+
+//function to turn grid cells white or "erase" their color
+function erase(element_array) {
+    
+    element_array.forEach((div) => {
+
+        div.addEventListener('mouseenter', function (e) {
+            let brightness = 100;
+            let color = 360;
+            e.target.style.background = `hsl(${color}, 100%, ${brightness}%)`;
+        });
+    });
+};
+
+
+//function to clear eventlisteners attached to html elements
+function clear(element_array) {
+
+    element_array.forEach((div) => {
+        div.removeEventListener('mouseenter', function () {
+        });
+    });
+};
+
+
 //initialize grid location and grid size
 const grid = document.querySelector('.grid');
 const grid_size = document.querySelector('#grid_size');
@@ -61,4 +101,25 @@ grid_size.addEventListener('change', () => {
 
     make_grid(grid, size);
     let selection = document.querySelectorAll('.col');
+});
+
+//add event listener to the 'custom' button
+custom_btn.addEventListener('click' , (e) => {
+    e.preventDefault();
+    clear(selection);
+    draw(selection, color_input);
+});
+
+//add event listener to the 'rainbow' button
+rainbow_btn.addEventListener('click' , (e) => {
+    e.preventDefault();
+    clear(selection);
+    rainbow(selection);
+});
+
+//add event listener to the 'erase' button
+eraser_btn.addEventListener('click' , (e) => {
+    e.preventDefault();
+    clear(selection);
+    erase(selection);
 });
