@@ -100,7 +100,7 @@ grid_size.addEventListener('change', () => {
     grid.innerHTML = '';
 
     make_grid(grid, size);
-    let selection = document.querySelectorAll('.col');
+    selection = document.querySelectorAll('.col');
 });
 
 //add event listener to the 'custom' button
