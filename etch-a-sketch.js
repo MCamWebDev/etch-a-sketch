@@ -25,7 +25,7 @@ function draw(element_array, color_selection) {
     
     element_array.forEach((div) => {
 
-        div.addEventListener('mousemove', function (e) {
+        div.addEventListener('mouseenter', function (e) {
             color_value = color_selection.value;
             e.target.style.background = color_value;
         });
@@ -37,11 +37,22 @@ function draw(element_array, color_selection) {
 const grid = document.querySelector('.grid');
 const grid_size = document.querySelector('#grid_size');
 
-//creat initial grid and read in color selection
+//create grid and select elements to be colored
 make_grid(grid, grid_size.value);
 let selection = document.querySelectorAll('.col');
-let color_input = document.querySelector('#color');
-draw(selection, color_input);
+
+//select color input and enable draw function
+const color_input = document.querySelector('#color');
+//draw(selection, color_input);
+
+//define button qureies
+const custom_btn = document.querySelector('#custom');
+const rainbow_btn = document.querySelector('#rainbow');
+const eraser_btn = document.querySelector('#erase');
+const reset_btn = document.querySelector('#reset');
+
+
+
 
 //reinitialize grid when the size is changed
 grid_size.addEventListener('change', () => {
@@ -50,5 +61,4 @@ grid_size.addEventListener('change', () => {
 
     make_grid(grid, size);
     let selection = document.querySelectorAll('.col');
-    draw(selection, color_input);
 });
