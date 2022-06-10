@@ -12,11 +12,15 @@
         <div class="menu">
             <form>
                 <div id="size">
-                    <span>Grid Size:</span>
-                    <input type="range" id="grid_size" min="16" max="64" value="16"></input>
+                    <span class="sub_title">Grid Size:</span>
+                    <div>
+                        <input type="range" id="grid_size" min="16" max="100" value="16"></input>
+                        <span class='grid_size'></span>
+                    </div>
                 </div>
                 <div id="options">
-                    <input type="color" id="color" value="black"></input>
+                    <span class="sub_title">Pen Color:</span>
+                    <input type="color" id="color" value="#000000"></input>
                     <button id="custom">Custom</button>
                     <button id="rainbow">Rainbow</button>
                     <button id="erase">Eraser</button>
