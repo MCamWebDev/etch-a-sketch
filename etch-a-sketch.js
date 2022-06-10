@@ -63,6 +63,18 @@ function erase(element_array) {
 };
 
 
+//function to clear all grid elements
+function reset(element_array, loc, ) {
+
+    element_array.forEach((div) => {
+
+        let brightness = 100;
+        let color = 360;
+        div.style.background = `hsl(${color}, 100%, ${brightness}%)`;
+    });
+};
+
+
 //function to clear eventlisteners attached to html elements
 function clear(element_array) {
 
@@ -83,14 +95,12 @@ let selection = document.querySelectorAll('.col');
 
 //select color input and enable draw function
 const color_input = document.querySelector('#color');
-//draw(selection, color_input);
 
 //define button qureies
 const custom_btn = document.querySelector('#custom');
 const rainbow_btn = document.querySelector('#rainbow');
 const eraser_btn = document.querySelector('#erase');
 const reset_btn = document.querySelector('#reset');
-
 
 
 
@@ -123,3 +133,12 @@ eraser_btn.addEventListener('click' , (e) => {
     clear(selection);
     erase(selection);
 });
+
+//add event listener to the 'reset' button
+reset_btn.addEventListener('click' , (e) => {
+    e.preventDefault();
+    clear(selection);
+    reset(selection);
+});
+
+
