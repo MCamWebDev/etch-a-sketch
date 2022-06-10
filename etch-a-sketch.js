@@ -88,6 +88,8 @@ function clear(element_array) {
 //initialize grid location and grid size
 const grid = document.querySelector('.grid');
 const grid_size = document.querySelector('#grid_size');
+const grid_size_display = document.querySelector('.grid_size')
+grid_size_display.textContent = `${grid_size.value} x ${grid_size.value}`;
 
 //create grid and select elements to be colored
 make_grid(grid, grid_size.value);
@@ -108,7 +110,7 @@ const reset_btn = document.querySelector('#reset');
 grid_size.addEventListener('change', () => {
     let size = grid_size.value;
     grid.innerHTML = '';
-
+    grid_size_display.textContent = `${size} x ${size}`;
     make_grid(grid, size);
     selection = document.querySelectorAll('.col');
 });
