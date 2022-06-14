@@ -26,8 +26,16 @@ body {
     flex-direction: column;
     justify-content: center;
 
-    border: black solid 0.5px;
     font-size: 30px;
+}
+
+.boundary {
+    padding: 40px;
+}
+
+.menu , .boundary {
+    border: black solid 8px;
+    border-radius: 1em;
 }
 
 form {
@@ -60,7 +68,11 @@ form {
 
 #options button {
     font-size: 24px;
-    width: 150px;
+    width: 200px;
+    padding: 4px;
+    height: auto;
+    border-radius: 0.3em;
+    background-color: white;
 }
 
 input {
@@ -72,7 +84,6 @@ label {
     flex: 0 0 auto;
     justify-content: right;
     width: 125px;
-    a
 }
 
 .grid {
@@ -83,10 +94,7 @@ label {
 
     width: 550px;
     height: 550px;
-}
-
-.row , .col {
-    border: black solid 0.5px;
+    border: black solid 2px;
 }
 
 .row {
@@ -105,4 +113,14 @@ label {
 
 .grid_size {
     font-size: 24px;
+}
+
+#color {
+    width: 120px;
+    height: 60px;
+    padding: 4px;
+
+    border-radius: 2px;
+    border: black solid 1px;
+    background-color: white;
 }
