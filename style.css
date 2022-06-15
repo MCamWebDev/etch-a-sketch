@@ -1,3 +1,7 @@
+html {
+    background-color: rgb(241, 238, 235);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
 body {
     display: flex;
@@ -9,6 +13,7 @@ body {
 .title {
     margin-bottom: 40px;
     font-size: 22px;
+    color: rgb(59, 58, 56);
 }
 
 .content {
@@ -24,9 +29,11 @@ body {
     display: flex;
     flex: 1 2 auto;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 
+    padding-top: 56px;
     font-size: 30px;
+    color: rgb(59, 58, 56);
 }
 
 .boundary {
@@ -34,8 +41,9 @@ body {
 }
 
 .menu , .boundary {
-    border: black solid 8px;
+    border: black solid 4px;
     border-radius: 1em;
+    border-color: rgba(182, 177, 170, 0.3);
 }
 
 form {
@@ -46,33 +54,28 @@ form {
 
 #size {
     display: flex;
-    flex: 1 0 auto;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-#size div {
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#options {
+.options {
     display: flex;
     flex: 1 0 auto;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
 }
 
-#options button {
+.options button {
     font-size: 24px;
     width: 200px;
     padding: 4px;
     height: auto;
+
+    color: rgb(82, 81, 79);
+    background-color: rgb(185, 183, 174);
     border-radius: 0.3em;
-    background-color: white;
+    border: rgb(151, 146, 139) solid 2px;
 }
 
 input {
@@ -94,7 +97,9 @@ label {
 
     width: 550px;
     height: 550px;
-    border: black solid 2px;
+    
+    border: rgba(156, 154, 151, 0.5) solid 2px;
+    background-color: white;
 }
 
 .row {
@@ -120,7 +125,6 @@ label {
     height: 60px;
     padding: 4px;
 
-    border-radius: 2px;
-    border: black solid 1px;
-    background-color: white;
+    background-color: rgb(255, 252, 248);
+    border: rgba(156, 154, 151, 0.3) solid 2px;
 }

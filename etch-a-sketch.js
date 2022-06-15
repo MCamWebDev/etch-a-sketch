@@ -99,10 +99,10 @@ let selection = document.querySelectorAll('.col');
 const color_input = document.querySelector('#color');
 
 //define button qureies
-const custom_btn = document.querySelector('#custom');
-const rainbow_btn = document.querySelector('#rainbow');
-const eraser_btn = document.querySelector('#erase');
-const reset_btn = document.querySelector('#reset');
+const custom_btn = document.querySelector('.custom');
+const rainbow_btn = document.querySelector('.rainbow');
+const eraser_btn = document.querySelector('.erase');
+const reset_btn = document.querySelector('.reset');
 
 
 
