@@ -103,6 +103,7 @@ const custom_btn = document.querySelector('.custom');
 const rainbow_btn = document.querySelector('.rainbow');
 const eraser_btn = document.querySelector('.erase');
 const reset_btn = document.querySelector('.reset');
+const all_btns = document.querySelectorAll('.options > button');
 
 
 
@@ -113,6 +114,10 @@ grid_size.addEventListener('change', () => {
     grid_size_display.textContent = `${size} x ${size}`;
     make_grid(grid, size);
     selection = document.querySelectorAll('.col');
+
+    all_btns.forEach((button) => {
+        button.setAttribute('id','unactive');
+    });
 });
 
 //add event listener to the 'custom' button
@@ -120,6 +125,13 @@ custom_btn.addEventListener('click' , (e) => {
     e.preventDefault();
     clear(selection);
     draw(selection, color_input);
+
+    all_btns.forEach((button) => {
+        button.setAttribute('id','unactive');
+    });
+
+    custom_btn.setAttribute('id','active');
+    reset_btn.removeAttribute('class', 'blink');
 });
 
 //add event listener to the 'rainbow' button
@@ -127,6 +139,13 @@ rainbow_btn.addEventListener('click' , (e) => {
     e.preventDefault();
     clear(selection);
     rainbow(selection);
+
+    all_btns.forEach((button) => {
+        button.setAttribute('id','unactive');
+    });
+
+    rainbow_btn.setAttribute('id','active');
+    reset_btn.removeAttribute('class', 'blink');
 });
 
 //add event listener to the 'erase' button
@@ -134,6 +153,13 @@ eraser_btn.addEventListener('click' , (e) => {
     e.preventDefault();
     clear(selection);
     erase(selection);
+
+    all_btns.forEach((button) => {
+        button.setAttribute('id','unactive');
+    });
+
+    eraser_btn.setAttribute('id','active');
+    reset_btn.removeAttribute('class', 'blink');
 });
 
 //add event listener to the 'reset' button

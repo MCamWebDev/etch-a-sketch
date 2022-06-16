@@ -128,3 +128,8 @@ label {
     background-color: rgb(255, 252, 248);
     border: rgba(156, 154, 151, 0.3) solid 2px;
 }
+
+#active {
+    color: rgb(241, 238, 235);
+    background-color: rgb(64, 124, 69);
+}
