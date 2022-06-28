@@ -75,7 +75,18 @@ form {
     color: rgb(82, 81, 79);
     background-color: rgb(185, 183, 174);
     border-radius: 0.3em;
-    border: rgb(151, 146, 139) solid 2px;
+    border: rgb(151, 146, 139) solid 1px;
+}
+
+.options button:hover {
+    color: rgb(241, 238, 235);
+    background-color: rgb(97, 168, 103);
+}
+
+.options .reset:active {
+    background-color: rgb(64, 124, 69);
+    box-shadow: 0 2px rgb(185, 183, 174);
+    transform: translateY(2px);
 }
 
 input {

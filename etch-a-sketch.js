@@ -26,6 +26,7 @@ function draw(element_array, color_selection) {
     element_array.forEach((div) => {
 
         div.addEventListener('mouseenter', function (e) {
+
             color_value = color_selection.value;
             e.target.style.background = color_value;
         });
@@ -131,7 +132,6 @@ custom_btn.addEventListener('click' , (e) => {
     });
 
     custom_btn.setAttribute('id','active');
-    reset_btn.removeAttribute('class', 'blink');
 });
 
 //add event listener to the 'rainbow' button
@@ -145,7 +145,6 @@ rainbow_btn.addEventListener('click' , (e) => {
     });
 
     rainbow_btn.setAttribute('id','active');
-    reset_btn.removeAttribute('class', 'blink');
 });
 
 //add event listener to the 'erase' button
@@ -159,7 +158,6 @@ eraser_btn.addEventListener('click' , (e) => {
     });
 
     eraser_btn.setAttribute('id','active');
-    reset_btn.removeAttribute('class', 'blink');
 });
 
 //add event listener to the 'reset' button
@@ -168,5 +166,3 @@ reset_btn.addEventListener('click' , (e) => {
     clear(selection);
     reset(selection);
 });
-
-
