@@ -26,7 +26,7 @@ function draw(element_array, color_selection) {
     element_array.forEach((div) => {
 
         div.addEventListener('mouseenter', function (e) {
-
+            if (e.buttons !== 1) return;
             color_value = color_selection.value;
             e.target.style.background = color_value;
         });
@@ -42,6 +42,7 @@ function rainbow(element_array) {
     element_array.forEach((div) => {
 
         div.addEventListener('mouseenter', function (e) {
+            f (e.buttons !== 1) return;
             let brightness = 50;
             let color = (Math.ceil(360 * (Math.random())));
             e.target.style.background = `hsl(${color}, 100%, ${brightness}%)`;
@@ -56,6 +57,7 @@ function erase(element_array) {
     element_array.forEach((div) => {
 
         div.addEventListener('mouseenter', function (e) {
+            f (e.buttons !== 1) return;
             let brightness = 100;
             let color = 360;
             e.target.style.background = `hsl(${color}, 100%, ${brightness}%)`;
